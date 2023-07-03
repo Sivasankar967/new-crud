@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD App</title>
+</head>
+<body>
+  <h1>Items</h1>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <h3><%= item.name %></h3>
+        <p><%= item.description %></p>
+        <a href="/items/edit/<%= item._id %>">Edit</a>
+        <a href="/items/delete/<%= item._id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/items/create">Create new item</a>
+</body>
+</html>
